@@ -1,26 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="background-image: url('50.png');
+	  color: red;" lang="en">
 	<head>
 		<meta charset="UTF-8">
 		<title>Edsson</title>
 	</head>
 	<body>
-		<h1 style="text-align: center;">SE BUSCA EDSSON</h1>
-		<h2 style="text-align: center;">Este es edsson pero con cara de mamón</h2>
-		<IMG style="display: block;
-				    margin-left: auto;
-				    margin-right: auto;
-				    width: 320px;
-  					height: auto;" 
-			 SRC="edsson.gif">
-		<h2 style="text-align: center;">Edsson ..... .</h2>
-		<div style="margin-left: 40%">
-			<ul>
-				<li>Me contaba chistes</li>
-				<li>Me daba de su pan en el recreo</li>
-				<li>Y mimama nos dejaba ver rickan morty</li>
-				<li>Me contaba chistes</li>
-			</ul>
-		</div>
+			<iframe src="song.ogg" allow="autoplay" style="display:none" id="iframeAudio">
+			</iframe> 
+			<audio src="/song.ogg" autoplay>
+			  Your browser does not support the <code>audio</code> element.
+			</audio>
+			<div style="background-position: center; background-size: 60% 120%; background-image: url('bg.png'); background-repeat: no-repeat; padding: 0%;">
+				<h1 style="text-align: center;">SE BUSCA EDSSON</h1>
+				<h2 style="text-align: center;">Este es edsson pero con cara de mamón</h2>
+				<IMG style="display: block;
+						    margin-left: auto;
+						    margin-right: auto;
+						    width: 320px;
+		  					height: auto;" 
+					 SRC="edsson.gif">
+				<h2 style="text-align: center;">Edsson ..... .</h2>
+				<div style="margin-left: 40%">
+					<ul>
+						<li>Me contaba chistes</li>
+						<li>Me daba de su pan en el recreo</li>
+						<li>Y mimama nos dejaba ver rickan morty</li>
+						<li>Me contaba chistes</li>
+					</ul>
+				</div>
+			</div>
+			<script type="text/javascript">
+				var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+				if (!isChrome){
+				    $('#iframeAudio').remove()
+				}
+				else {
+				    $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
+				}
+			</script>
 	</body>
 </html>
